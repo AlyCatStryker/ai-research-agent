@@ -1,45 +1,45 @@
 # 🤖 IBM AI Research Agent
 
-**An AI-powered research assistant for PDFs.**  
-Upload corporate reports or whitepapers and ask questions in plain English. Choose:
-
-- **Document Mode (grounded)** – answers *only* from your PDFs, with citations.
-- **Hybrid** – tries your PDFs first; if confidence is low, falls back to general LLM.
-- **Global AI Mode** – ask anything (not limited to your PDFs).
-
-https://github.com/AlyCatStryker/ibm-ai-research-agent
+A **Streamlit + LangChain-powered AI research assistant** that answers questions from uploaded PDFs using OpenAI's GPT models.  
+Users can switch between two powerful modes — **Document Mode** (answers only from uploaded PDFs) and **Global AI Mode** (fallback to general AI).
 
 ---
 
-## ✨ Features
-
-- 📄 Multi-PDF upload (in-memory) + **Persist to Index** button  
-- 🔎 Retrieval-Augmented Generation (RAG) via **ChromaDB** + OpenAI embeddings  
-- 🧠 Hybrid fallback to general LLM when docs don’t have the answer  
-- 📚 Citations (file + page) so answers are traceable  
-- 🧭 Clean UI with **Document Mode** vs **Global AI Mode** page navigation  
-- ✅ **Ready and listening…** status when idle  
-- 🧰 Built with **Streamlit, LangChain, OpenAI, ChromaDB**
-
----
-
-## 🧱 Tech Stack
-
-- Frontend: **Streamlit**
-- AI Orchestration: **LangChain**
-- LLM: **OpenAI GPT (gpt-4o-mini configurable via `.env`)**
-- Embeddings: **text-embedding-3-small**
-- Vector DB: **ChromaDB**
-- Language: **Python 3.10+**
+## 🚀 Features
+- 📂 Upload one or multiple PDFs (reports, research papers, etc.)
+- 🧠 Ask natural questions about document contents
+- ⚡ Choose between:
+  - **Document Mode** – answers only from your PDFs with citations
+  - **Hybrid (Global AI Mode)** – blends document knowledge with general AI reasoning
+- 🗂️ Local document indexing via **ChromaDB**
+- 🧩 Built with **Streamlit**, **LangChain**, **OpenAI API**, and **ChromaDB**
 
 ---
 
-## 🚀 Quickstart
+## 🛠️ Tech Stack
+- Python 3.10  
+- Streamlit  
+- LangChain  
+- OpenAI API  
+- ChromaDB  
+- dotenv  
 
-1) **Clone & create venv**
+---
+
+## 🧑‍💻 Run Locally
+
 ```bash
-git clone https://github.com/yourusername/ibm-ai-research-agent.git
-cd ibm-ai-research-agent
+# Clone the repo
+git clone https://github.com/AlyCatStryker/ai-research-agent.git
+cd ai-research-agent
+
+# Create virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the Streamlit app
+streamlit run app.py
 
